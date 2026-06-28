@@ -1,0 +1,263 @@
+/* Importar Animate.css para usar sus clases (se asume que se agrega la librería en el HTML) */
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'); */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0fff0; /* Fondo más claro para Bootstrap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: #333; 
+  line-height: 1.6; 
+}
+
+/* Estilos de Tipografía */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica Neue', sans-serif; 
+  color: #1e7e34; /* Verde más oscuro de Bootstrap */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); 
+  margin-top: 1.5em; 
+  margin-bottom: 0.5em; 
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #28a745; /* Verde Bootstrap */
+  padding-bottom: 0.3em;
+}
+
+p {
+  font-size: 1.1rem; 
+  max-width: 900px; /* Ancho ajustado para mejor lectura */
+  margin: 0 auto 1.5rem auto; 
+  text-align: justify; 
+  color: #495057; /* Gris oscuro para texto */
+}
+
+/* --- BARRA DE NAVEGACIÓN (HEADER) --- */
+.greenup-navbar {
+    width: 100%;
+    background-color: #28a745; /* Fondo verde principal */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1030; /* Alto z-index para que esté siempre arriba */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container .img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid white;
+}
+
+.logo-container span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s, text-shadow 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #ffc107; /* Amarillo para hover */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* --- PERFIL DE USUARIO Y NIVEL (NUEVO) --- */
+.user-profile-nav {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img-nav {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-img-nav:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.user-level-nav {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* --- SECCIÓN PLANETA CURVO (NUEVO) --- */
+.planet-container {
+    position: relative;
+    width: 300px; /* Tamaño fijo para el contenedor del planeta */
+    height: 300px;
+    margin: 40px auto;
+}
+
+.planet-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(40, 167, 69, 0.5); /* Sombra verde */
+    transition: transform 1s;
+}
+
+.planet-image:hover {
+    transform: rotate(360deg);
+}
+
+.curved-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Permite hacer clic en el planeta */
+    /* Usando la funcionalidad básica de CSS */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.curved-text-content {
+    /* Estilo del texto */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+    text-shadow: 1px 1px 0 #fff;
+    
+    /* El efecto curvo se simula visualmente o se requeriría una librería JS/SVG más compleja */
+    /* Para el efecto curvo simple: */
+    position: absolute;
+    top: -30px; /* Posicionar por encima del círculo */
+    /* Se podría usar transform: rotate(Xdeg) y posicionamiento para letras individuales (CSS puro es limitado) */
+}
+
+
+/* --- NOTICIAS Y MISIÓN (Bootstrap Enhancement) --- */
+.news-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Para que la imagen no se salga */
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.news-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.mission-card {
+    border-left: 5px solid #1e7e34;
+    transition: background-color 0.3s;
+}
+
+.mission-card:hover {
+    background-color: #e9f7ef;
+}
+
+.mission-exp {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* --- CALCULADORA --- */
+.calculator-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#evaluacion {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+#evaluacion.bueno {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#evaluacion.regular {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+#evaluacion.malo {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Estilos para el modal de autenticación */
+.modal-content {
+    border: 5px solid #28a745;
+}
+
+.btn-green-custom {
+    background-color: #28a745;
+    border-color: #28b649;
+    transition: background-color 0.3s;
+}
+.btn-green-custom:hover {
+    background-color: #000000;
+    border-color: #1e7e34;
+}
+
+.hide-input {
+    display: none;
+}
+.modal-content.bg-success {
+    background-color: #10c23a !important; 
+    border-radius: 15px;
+}
+
+.modal-header, .modal-footer {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.btn-close-white {
+    filter: invert(1); 
+}
+
+#progressBar {
+    transition: width 0.5s ease-in-out;
+}
