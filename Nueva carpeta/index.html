@@ -25,8 +25,17 @@
             <img id="user-avatar" src="imagenes/default-avatar.png" alt="Foto de Perfil" class="profile-img-nav animate__animated animate__pulse" onclick="document.getElementById('file-input').click()">
             <span class="user-level-nav badge bg-success animate__animated animate__fadeIn">Nivel <span id="nav-level">1</span></span>
             <input type="file" id="file-input" style="display: none;" accept="image/*">
+
+            <div class="ecobot-widget" id="ecobot-widget">
+                <div id="ecobot-bubble" class="ecobot-bubble"></div>
+                <button id="ecobot-avatar" class="ecobot-avatar" aria-label="Asistente Eco">
+                    🌱
+                    <span id="ecobot-badge" class="ecobot-badge"></span>
+                </button>
+            </div>
         </div>
     </div>
+
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content animate__animated animate__zoomIn">
@@ -50,6 +59,7 @@
             </div>
         </div>
     </div>
+
     <div class="container mt-4 main-content animate__animated animate__fadeIn">
         <h1 class="text-center animate__animated animate__fadeInDown">Bienvenido a GREENUP 🌎</h1>
         <p class="text-center lead">Nuestra app consiste en hacer misiones para tu planeta virtual.</p>
@@ -61,51 +71,15 @@
             </div>
             <button class="btn btn-sm btn-info mt-3 animate__animated animate__bounceIn" onclick="modificarTextoCurvo()">Modificar Texto</button>
         </div>
-        <div class="calculator-container card p-4 shadow-lg animate__animated animate__fadeInUp">
-            <h1 class="calculator-title">Calculadora de Huella de Carbono 🌍</h1>
-            <form id="carbon-footprint-form">
-                <div class="input-group mb-3">
-                    <label for="consumo-energia" class="form-label">Consumo de energía:</label>
-                    <select id="consumo-energia" class="form-select">
-                        <option value="bajo">Bajo</option>
-                        <option value="medio">Medio</option>
-                        <option value="alto">Alto</option>
-                    </select>
-                </div>
-                <div class="input-group mb-3">
-                    <label for="uso-coche" class="form-label">Frecuencia de uso del coche:</label>
-                    <select id="uso-coche" class="form-select">
-                        <option value="casi-nunca">Casi nunca</option>
-                        <option value="algunas-veces">Algunas veces al mes</option>
-                        <option value="todos-dias">Todos los días</option>
-                    </select>
-                </div>
-                <div class="input-group mb-3">
-                    <label for="viajes-avion" class="form-label">Viajes en avión al año:</label>
-                    <select id="viajes-avion" class="form-select">
-                        <option value="ninguno">Ninguno</option>
-                        <option value="varios">3 o más vuelos</option>
-                    </select>
-                </div>
-                <div class="input-group mb-3">
-                    <p class="mb-2">¿Sueles reciclar?</p>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="reciclaje" id="reciclar-si" value="si" checked>
-                        <label class="form-check-label" for="reciclar-si">Sí</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="reciclaje" id="reciclar-no" value="no">
-                        <label class="form-check-label" for="reciclar-no">No</label>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-success w-100 animate__animated animate__heartBeat">Calcular Huella</button>
-            </form>
 
-            <div id="resultado" class="mt-4 p-3 border rounded" style="display: none;">
-                Tu huella de carbono anual estimada es de <span id="huella-anual" class="fw-bold"></span> toneladas de CO₂.
-                <div id="evaluacion" class="mt-2 p-2 rounded"></div>
-            </div>
+        <div class="text-center my-5 animate__animated animate__fadeInUp">
+            <h2>¿Querés saber tu huella de carbono? 🌍</h2>
+            <p>Descubrí en pocos pasos cuánto CO₂ generás al año.</p>
+            <a href="calculadora.html" class="btn btn-success btn-lg calc-cta-btn animate__animated animate__heartBeat">
+                Calcular mi Huella de Carbono
+            </a>
         </div>
+
         <hr class="my-5">
 
         <h2 class="text-center my-4 animate__animated animate__fadeIn">Noticias Ambientales Destacadas 📰</h2>
@@ -141,11 +115,12 @@
                 </div>
             </div>
         </div>
+
         <div class="about-us-section p-4 my-5 card shadow animate__animated animate__fadeIn">
             <h2>Sobre nosotros:</h2>
             <p>Somos un grupo de alumnos de un secundario que ven la importancia del cuidado del ambiente. Nuestra pasión por la programación y el diseño nos llevó a crear una plataforma que permita a los usuarios monitorear y reducir su impacto climático.</p>
             <h3>¿Quienes somos?</h3>
-            <p><strong>.Máximo Fernandez</strong><br><strong>.Genaro Taborda</strong><br><strong>.Lisandro Ceballos</strong><br><strong>.Facundo Solano</strong><br><strong>.Facundo Zárate</strong></p>
+            <p><strong>.Benjamin Avendaño</strong><br><strong>.Genaro Taborda</strong><br><strong>.Lisandro Ceballos</strong><br><strong>.Tomas Reynoso</strong><br><strong>.Jeremias Canovas</strong></p>
         </div>
     </div>
 
